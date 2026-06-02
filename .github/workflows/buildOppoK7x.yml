@@ -135,6 +135,13 @@ jobs:
         export SUBARCH=arm64
 
         make O=out mt6853-ss_defconfig
+
+         ./scripts/config --file out/.config \
+          --enable CONFIG_NAMESPACES \
+          --enable CONFIG_USER_NS \
+          --enable DEVTMPFS \
+          --enable DEVTMPFS_MOUNT
+        make O=out olddefconfig
         
         # 开启 KSU
         ./scripts/config --file out/.config \
