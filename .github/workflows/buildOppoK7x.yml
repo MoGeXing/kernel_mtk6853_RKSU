@@ -187,7 +187,7 @@ jobs:
         cd $GITHUB_WORKSPACE/kernel_workspace
         git clone --depth=1 https://github.com/osm0sis/AnyKernel3
         cd AnyKernel3
-        sed -i 's|block=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;|block=/dev/block/by-name/boot;|g' anykernel.sh
+        sed -i 's|block=/dev/block/by-name/boot;|block=/dev/block/by-name/boot;|g' anykernel.sh
         sed -i 's/do.devicecheck=1/do.devicecheck=0/g' anykernel.sh
         sed -i 's/is_slot_device=0;/is_slot_device=0;/g' anykernel.sh
         sed -i '/cmdline=/a cmdline="androidboot.selinux=permissive"' anykernel.sh

@@ -417,7 +417,7 @@ config SCHED_WALT
 
 config BSD_PROCESS_ACCT
 	bool "BSD Process Accounting"
-	depends on MULTIUSER
+	 
 	help
 	  If you say Y here, a user level program will be able to instruct the
 	  kernel (via a special system call) to write process accounting
@@ -444,7 +444,7 @@ config BSD_PROCESS_ACCT_V3
 config TASKSTATS
 	bool "Export task/process statistics through netlink"
 	depends on NET
-	depends on MULTIUSER
+	 
 	default n
 	help
 	  Export selected statistics for tasks/processes through the
@@ -1072,7 +1072,7 @@ config CHECKPOINT_RESTORE
 
 menuconfig NAMESPACES
 	bool "Namespaces support" if EXPERT
-	depends on MULTIUSER
+	 
 	default !EXPERT
 	help
 	  Provides the way to make tasks work with different objects using
@@ -1099,7 +1099,7 @@ config IPC_NS
 
 config USER_NS
 	bool "User namespace"
-	default n
+	default y
 	help
 	  This allows containers, i.e. vservers, to use user namespaces
 	  to provide different user info for different servers.

@@ -84,7 +84,7 @@ void retire_userns_sysctls(struct user_namespace *ns);
 struct ucounts *inc_ucount(struct user_namespace *ns, kuid_t uid, enum ucount_type type);
 void dec_ucount(struct ucounts *ucounts, enum ucount_type type);
 
-#ifdef CONFIG_USER_NS
+#if 1
 
 static inline struct user_namespace *get_user_ns(struct user_namespace *ns)
 {

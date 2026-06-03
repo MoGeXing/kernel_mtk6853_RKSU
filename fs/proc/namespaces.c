@@ -26,7 +26,7 @@ static const struct proc_ns_operations *ns_entries[] = {
 	&pidns_operations,
 	&pidns_for_children_operations,
 #endif
-#ifdef CONFIG_USER_NS
+#if 1
 	&userns_operations,
 #endif
 	&mntns_operations,

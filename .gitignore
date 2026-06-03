@@ -1,0 +1,7 @@
+out/
+out/
+.tmp_vmlinux*
+vmlinux*
+out/
+.tmp_vmlinux*
+vmlinux*
